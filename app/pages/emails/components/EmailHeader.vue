@@ -5,7 +5,7 @@ const siteUrl = config.public.siteUrl;
 <template>
   <header class="header">
     <img
-      src="{{ siteUrl }}/img/vicksburg-family-dentistry-logo-email.jpg"
+      :src="`${siteUrl}/img/vicksburg-family-dentistry-logo-email.jpg`"
       alt="Vicksburg Family Dentistry"
     />
   </header>

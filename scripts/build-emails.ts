@@ -103,8 +103,18 @@ async function processTemplate(
     }
   }
 
-  // Replace environment variables
+  // Replace environment variables in template literals
   const siteUrl = process.env.NUXT_PUBLIC_SITE_URL || "";
+
+  // Handle Vue attribute bindings with template literals containing siteUrl
+  processedHtml = processedHtml.replace(
+    /:([a-zA-Z-]+)="`\$\{siteUrl\}([^`]*)`"/g,
+    (match, attrName, rest) => {
+      return `${attrName}="${siteUrl}${rest}"`;
+    },
+  );
+
+  // Replace simple {{ siteUrl }} placeholders
   processedHtml = processedHtml.replace(/\{\{\s*siteUrl\s*\}\}/g, siteUrl);
 
   // Replace Vue template syntax with placeholder values
@@ -115,8 +125,8 @@ async function processTemplate(
     }
   });
 
-  // Remove Vue-specific attributes and syntax
-  processedHtml = processedHtml.replace(/\s+:[a-zA-Z-]+="[^"]*"/g, ""); // Remove :prop bindings
+  // Remove remaining Vue-specific attributes and syntax
+  processedHtml = processedHtml.replace(/\s+:[a-zA-Z-]+="[^"]*"/g, ""); // Remove remaining :prop bindings
   processedHtml = processedHtml.replace(/\s+@[a-zA-Z-]+="[^"]*"/g, ""); // Remove @event handlers
   processedHtml = processedHtml.replace(/\s+v-[a-zA-Z-]+="[^"]*"/g, ""); // Remove v-directives
 
