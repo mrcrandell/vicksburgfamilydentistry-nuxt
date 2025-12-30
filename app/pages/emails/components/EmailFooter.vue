@@ -6,8 +6,12 @@ defineProps<{
 
 <template>
   <footer class="footer">
-    <p>Four Green Fields Farm<br><span class="unstyle-auto-detected-links">15693 Wilson Road, Rodney, MI 49342<br>231-580-1463 and ask for Kevin</span></p>
-    <p>&copy; {{year}} All Rights Reserved</p>
+    <p>
+      Vicksburg Family Dentistry<br /><span class="unstyle-auto-detected-links"
+        >02 West Prairie Street, Vicksburg, MI 49009<br />269-649-1495</span
+      >
+    </p>
+    <p>&copy; {{ year }} All Rights Reserved</p>
   </footer>
 </template>
 
@@ -15,7 +19,7 @@ defineProps<{
 footer.footer {
   text-align: center;
   padding: 20px;
-  background-color: #647b97;
+  background-color: #636466;
   color: #fff;
   font-size: 14px;
 }

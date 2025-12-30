@@ -32,12 +32,13 @@ definePageMeta({
 
 <style>
 .email {
-  font-family: Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+    sans-serif;
   font-size: 16px;
   color: #333;
   width: 100%;
   margin: auto;
-  background-color: #647b97;
+  background-color: #636466;
   min-height: 100%;
 }
 .content {
