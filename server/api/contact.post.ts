@@ -95,7 +95,7 @@ export default defineEventHandler(async (event) => {
       to: body.email,
       "h:Reply-To": config.contactReplyToEmail ||
         "vicksburgfamilydentistry@gmail.com",
-      subject: "Thank You for Contacting Four Green Fields Farm",
+      subject: "Thank You for Contacting Vicksburg Family Dentistry",
       html,
     };
 
