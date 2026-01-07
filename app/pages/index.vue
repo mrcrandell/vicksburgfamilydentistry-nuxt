@@ -1,5 +1,5 @@
 <template>
   <main class="main">
-    <h1>Home</h1>
+    <SectionIntro />
   </main>
 </template>
