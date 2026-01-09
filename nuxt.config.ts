@@ -47,4 +47,19 @@ export default defineNuxtConfig({
       },
     },
   },
+  ssr: true, // SSR enabled (still needed for flexibility)
+  nitro: {
+    preset: "vercel",
+    cloudflare: {
+      deployConfig: true,
+    },
+    prerender: {
+      autoSubfolderIndex: false,
+      crawlLinks: true,
+      routes: ["/"],
+    },
+  },
+  routeRules: {
+    "/**": { static: true },
+  },
 });
