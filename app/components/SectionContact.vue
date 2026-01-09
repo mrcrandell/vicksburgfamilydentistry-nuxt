@@ -111,8 +111,10 @@ onUnmounted(() => {
               <span itemprop="streetAddress">602 West Prairie Street</span
               ><br />
               <span itemprop="addressLocality">Vicksburg</span>,
-              <span itemprop="addressRegion">MI</span>
-              <span itemprop="postalCode">49097</span>
+              <span itemprop="addressRegion">MI</span>&nbsp;<span
+                itemprop="postalCode"
+                >49097</span
+              >
             </address>
             <p>
               <a href="tel:12696491495"

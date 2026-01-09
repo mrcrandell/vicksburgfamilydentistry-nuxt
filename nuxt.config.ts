@@ -8,7 +8,8 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: "en", // This sets <html lang="en">
       },
-      title: "Vicksburg Family Dentistry",
+      title:
+        "Vicksburg Family Dentistry | Quality Dental Care in Vicksburg, MI",
       meta: [
         { charset: "utf-8" },
         { name: "viewport", content: "width=device-width, initial-scale=1" },
