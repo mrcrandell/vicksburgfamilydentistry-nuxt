@@ -56,7 +56,6 @@ function getContrast(hexcolor) {
   @include shadow-3();
   font-size: 1rem;
   padding: 15px;
-  // margin-bottom: 15px;
   border: 5px solid #fff;
   color: #fff;
   background-color: #eee;

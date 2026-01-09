@@ -1,6 +1,7 @@
 @use "sass:color";
 @use "sass:meta";
 @use "_variables.scss" as *;
+@use "_functions.scss" as *;
 @use "_mixins.scss" as *;
 
 :root {
@@ -23,8 +24,59 @@
   --black-rgb: #{to-rgb($black)};
 
   --body-color: #{$body-color};
+  --body-color-rgb: #{to-rgb($body-color)};
   --body-bg: #{$body-bg};
+  --body-bg-rgb: #{to-rgb($body-bg)};
+  --emphasis-color: #{$body-emphasis-color};
+  --emphasis-color-rgb: #{to-rgb($body-emphasis-color)};
+  --secondary-color: #{$body-secondary-color};
+  --secondary-bg: #{$body-secondary-bg};
+  --tertiary-color: #{$body-tertiary-color};
+  --tertiary-bg: #{$body-tertiary-bg};
   --text-muted: #{$gray-600};
+
+  --link-color: #{$link-color};
+  --link-color-rgb: #{to-rgb($link-color)};
+  --link-hover-color: #{$link-hover-color};
+  --link-hover-color-rgb: #{to-rgb($link-hover-color)};
+
+  --primary: #{$primary};
+  --primary-rgb: #{to-rgb($primary)};
+  --secondary: #{$secondary};
+  --secondary-rgb: #{to-rgb($secondary)};
+  --success: #{$success};
+  --success-rgb: #{to-rgb($success)};
+  --info: #{$info};
+  --info-rgb: #{to-rgb($info)};
+  --warning: #{$warning};
+  --warning-rgb: #{to-rgb($warning)};
+  --danger: #{$danger};
+  --danger-rgb: #{to-rgb($danger)};
+  --light: #{$light};
+  --light-rgb: #{to-rgb($light)};
+  --dark: #{$dark};
+  --dark-rgb: #{to-rgb($dark)};
+
+  // Card variables
+  --card-spacer-y: #{$card-spacer-y};
+  --card-spacer-x: #{$card-spacer-x};
+  --card-title-spacer-y: #{$card-title-spacer-y};
+  --card-title-color: #{$card-title-color};
+  --card-subtitle-color: #{$card-subtitle-color};
+  --card-border-width: #{$border-width};
+  --card-border-color: #{$border-color-translucent};
+  --card-border-radius: #{$border-radius};
+  --card-box-shadow: #{$card-box-shadow};
+  --card-inner-border-radius: calc(#{$border-radius} - #{$border-width});
+  --card-cap-padding-y: #{$card-cap-padding-y};
+  --card-cap-padding-x: #{$card-cap-padding-x};
+  --card-cap-bg: rgba(#{to-rgb($body-color)}, 0.03);
+  --card-cap-color: #{$card-cap-color};
+  --card-height: #{$card-height};
+  --card-color: #{$card-color};
+  --card-bg: #{$body-bg};
+  --card-img-overlay-padding: #{$card-img-overlay-padding};
+  --card-group-margin: #{$card-group-margin};
 
   // Fonts
 

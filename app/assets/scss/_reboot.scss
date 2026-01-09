@@ -108,11 +108,14 @@ h3 {
   @extend %heading;
   font-family: var(--font-sans-serif);
   color: $swamp;
+  font-weight: 500;
   @include font-size($h3-font-size);
 }
 
 h4 {
   @extend %heading;
+  font-family: var(--font-sans-serif);
+  font-weight: 500;
   @include font-size($h4-font-size);
 }
 

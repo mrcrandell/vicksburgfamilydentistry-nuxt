@@ -114,6 +114,12 @@ definePageMeta({
         <h2>Default Layout Buttons</h2>
         <button class="btn btn-primary">Primary Button</button>
         <button class="btn btn-secondary">Secondary Button</button>
+        <a
+          href="#services"
+          data-mt-duration="300"
+          class="js-trigger btn btn-lg btn-outline-light"
+          >See Our Services <i class="fa fa-angle-down" aria-hidden="true"></i
+        ></a>
         <button class="btn btn-success">Success Button</button>
         <button class="btn btn-warning">Warning</button>
         <button class="btn btn-danger">Delete</button>

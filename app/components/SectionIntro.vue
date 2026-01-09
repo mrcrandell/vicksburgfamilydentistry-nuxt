@@ -68,13 +68,25 @@ section.section.main {
     margin-bottom: 25px;
   }
   p {
-    @include font-size(rem(20));
     font-weight: 300;
     margin-bottom: rem(25);
   }
   img {
     @include shadow-3();
     border: 5px solid #fff;
+  }
+  .row {
+    @include bp-md-tablet {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: rem(30);
+    }
+  }
+  .col-sm-8 {
+    // Grid handles sizing automatically
+  }
+  .col-sm-4 {
+    // Grid handles sizing automatically
   }
 }
 .img-fluid {
