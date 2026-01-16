@@ -1,3 +1,13 @@
+<script setup>
+const animations = useStaggeredScrollAnimation(
+  4,
+  {
+    animationClass: "animate-zoom-in",
+  },
+  150
+);
+</script>
+
 <template>
   <section id="services" class="section services">
     <div class="content">
@@ -7,7 +17,7 @@
       </p>
 
       <div class="service-cards">
-        <div class="card" data-aos="zoom-in">
+        <div :ref="animations[0].target" class="card animate-zoom-in-prepare">
           <h3 class="card-header">Restorative / Cosmetic Dentistry</h3>
           <div class="card-body">
             <p>
@@ -16,7 +26,7 @@
             </p>
           </div>
         </div>
-        <div class="card" data-aos="zoom-in">
+        <div :ref="animations[1].target" class="card animate-zoom-in-prepare">
           <h3 class="card-header">Crowns / Bridges / Implants</h3>
           <div class="card-body">
             <p>
@@ -25,7 +35,7 @@
             </p>
           </div>
         </div>
-        <div class="card" data-aos="zoom-in">
+        <div :ref="animations[2].target" class="card animate-zoom-in-prepare">
           <h3 class="card-header">Dentures</h3>
           <div class="card-body">
             <p>
@@ -34,7 +44,7 @@
             </p>
           </div>
         </div>
-        <div class="card" data-aos="zoom-in">
+        <div :ref="animations[3].target" class="card animate-zoom-in-prepare">
           <h3 class="card-header">Ultrasonic Cleaning and Hygiene</h3>
           <div class="card-body">
             <p>

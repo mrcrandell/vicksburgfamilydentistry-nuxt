@@ -1,0 +1,84 @@
+// Scroll animations to replace AOS
+// Uses existing transition mixin which includes prefers-reduced-motion support
+
+@use "_mixins.scss" as *;
+@use "_variables.scss" as *;
+
+// Base animation state - hidden by default
+[class*="animate-"] {
+  opacity: 0;
+  @include transition(opacity 0.3s ease-out, transform 0.3s ease-out);
+
+  &.animate-complete {
+    // For users with reduced motion preference - immediate final state
+    opacity: 1;
+    transform: none;
+  }
+}
+
+// Zoom in animation (replaces data-aos="zoom-in")
+.animate-zoom-in-prepare {
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+.animate-zoom-in {
+  opacity: 1;
+  transform: scale(1);
+}
+
+// Fade up animation (future use)
+.animate-fade-up-prepare {
+  opacity: 0;
+  transform: translateY(1.875rem);
+}
+
+.animate-fade-up {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+// Fade in animation (future use)
+.animate-fade-in-prepare {
+  opacity: 0;
+}
+
+.animate-fade-in {
+  opacity: 1;
+}
+
+// Slide in from left (future use)
+.animate-slide-left-prepare {
+  opacity: 0;
+  transform: translateX(-1.875rem);
+}
+
+.animate-slide-left {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+// Slide in from right (future use)
+.animate-slide-right-prepare {
+  opacity: 0;
+  transform: translateX(1.875rem);
+}
+
+.animate-slide-right {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+// Animation delays for staggered effects
+@for $i from 1 through 10 {
+  .animate-delay-#{$i} {
+    animation-delay: #{$i * 0.1}s;
+  }
+}
+
+// Utility classes for immediate states (no animation)
+.no-animate {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}

@@ -7,6 +7,22 @@ const dentistryCoordinates = [42.121768, -85.542446];
 const googleMapsUrl =
   "https://maps.google.com/?cid=ChIJPYHXP72hF4gRp9Fj9W-LTt0";
 
+// Animation setup
+const { target: formTarget } = useScrollAnimation({
+  animationClass: "animate-zoom-in",
+  delay: 100,
+});
+
+const { target: infoTarget } = useScrollAnimation({
+  animationClass: "animate-zoom-in",
+  delay: 250,
+});
+
+const { target: hoursTarget } = useScrollAnimation({
+  animationClass: "animate-zoom-in",
+  delay: 400,
+});
+
 onMounted(async () => {
   // Only run on client side
   if (import.meta.client) {
@@ -92,13 +108,19 @@ onUnmounted(() => {
       <div id="map" ref="mapContainer" class="map"></div>
     </div>
     <div class="content cards-container">
-      <div class="card card-contact-form" data-aos="zoom-in">
+      <div
+        ref="formTarget"
+        class="card card-contact-form animate-zoom-in-prepare"
+      >
         <h3 class="card-header">Send Us a Message</h3>
         <div class="card-body">
           <ContactForm />
         </div>
       </div>
-      <div class="card card-contact-info" data-aos="zoom-in">
+      <div
+        ref="infoTarget"
+        class="card card-contact-info animate-zoom-in-prepare"
+      >
         <h3 class="card-header">Contact Information</h3>
         <div class="card-body">
           <div>
@@ -140,7 +162,10 @@ onUnmounted(() => {
           </div>
         </div>
       </div>
-      <div class="card card-contact-hours" data-aos="zoom-in">
+      <div
+        ref="hoursTarget"
+        class="card card-contact-hours animate-zoom-in-prepare"
+      >
         <h3 class="card-header">Hours</h3>
         <div class="card-body">
           <table class="table hours-table">

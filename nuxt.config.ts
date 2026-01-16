@@ -99,6 +99,21 @@ export default defineNuxtConfig({
         },
       ],
       link: [
+        // Preload critical fonts to reduce FOIT/FOUT
+        {
+          rel: "preload",
+          href:
+            "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&display=swap",
+          as: "style",
+        },
+        {
+          rel: "preload",
+          href:
+            "https://fonts.gstatic.com/s/cormorantgaramond/v15/co3YmX5slCNuHLi8bLeY9MK7whWMhyjQz_k.woff2",
+          as: "font",
+          type: "font/woff2",
+          crossorigin: "anonymous",
+        },
         {
           rel: "icon",
           type: "image/png",
