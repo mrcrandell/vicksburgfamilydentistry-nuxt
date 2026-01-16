@@ -112,7 +112,7 @@ async function submitForm() {
         </div>
       </div>
 
-      <div class="form-group">
+      <div class="form-group form-group-email">
         <label class="form-label sr-only" for="contact-email">Email *</label>
         <input
           id="contact-email"
@@ -128,7 +128,7 @@ async function submitForm() {
         </div>
       </div>
 
-      <div class="form-group">
+      <div class="form-group form-group-phone">
         <label class="form-label sr-only" for="contact-phone">Phone *</label>
         <input
           id="contact-phone"
@@ -177,9 +177,25 @@ async function submitForm() {
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 .contact-form {
   width: 100%;
+  > form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 rem(30);
+  }
+}
+
+.form-group {
+  width: 100%;
+}
+
+.form-group-email,
+.form-group-phone {
+  @include bp-md-tablet {
+    width: calc(50% - #{rem(15)});
+  }
 }
 
 .form-group-submit {

@@ -92,13 +92,13 @@ onUnmounted(() => {
       <div id="map" ref="mapContainer" class="map"></div>
     </div>
     <div class="content cards-container">
-      <div class="card" data-aos="zoom-in">
+      <div class="card card-contact-form" data-aos="zoom-in">
         <h3 class="card-header">Send Us a Message</h3>
         <div class="card-body">
           <ContactForm />
         </div>
       </div>
-      <div class="card" data-aos="zoom-in">
+      <div class="card card-contact-info" data-aos="zoom-in">
         <h3 class="card-header">Contact Information</h3>
         <div class="card-body">
           <div>
@@ -138,7 +138,7 @@ onUnmounted(() => {
           </div>
         </div>
       </div>
-      <div class="card" data-aos="zoom-in">
+      <div class="card card-contact-hours" data-aos="zoom-in">
         <h3 class="card-header">Hours</h3>
         <div class="card-body">
           <table class="table hours-table">
@@ -305,7 +305,37 @@ section.section.contact-us {
 .cards-container {
   display: flex;
   flex-direction: column;
-
   gap: rem(30);
+  @include bp-md-tablet {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+.card-contact-form {
+  width: 100%;
+  max-width: rem(650);
+  @include bp-xl-desktop {
+    max-width: none;
+    flex-basis: calc(50% - #{rem(15)});
+  }
+}
+.card-contact-info,
+.card-contact-hours {
+  @include bp-md-tablet {
+    flex-basis: calc(50% - #{rem(15)}); // Accounts for gap between cards
+  }
+  @include bp-xl-desktop {
+    flex-basis: calc(25% - #{rem(22.5)});
+  }
+}
+.card-contact-form,
+.card-contact-info,
+.card-contact-hours {
+  flex-grow: 1;
+  flex-shrink: 0;
+  @include bp-xl-desktop {
+    width: auto;
+  }
 }
 </style>
