@@ -68,6 +68,7 @@
         </p>
 
         <p>Warm regards,<br /><strong>Vicksburg Family Dentistry</strong></p>
+        <div class="clearfix"></div>
       </div>
 
       <hr />
@@ -112,9 +113,8 @@
       height: auto;
     }
   }
-
-  @media (min-width: 768px) {
-    overflow: auto; // Clears the float
-  }
+}
+.clearfix {
+  clear: both;
 }
 </style>
