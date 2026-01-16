@@ -82,7 +82,7 @@
       <p>
         Paula and Gaye are Dr Ford's assistants. They are very good at making
         you feel comfortable during procedures and always have a warm friendly
-        smile. Dr Young's assistant is NIkki Wagner who comes with 30 years of
+        smile. Dr Young's assistant is Nikki who comes with 30 years of
         experience.
       </p>
       <p>
