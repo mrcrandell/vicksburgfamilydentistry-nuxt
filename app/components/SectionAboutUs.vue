@@ -8,7 +8,7 @@
         from Western Michigan University in 1999. While at Western, he was
         involved in the Army ROTC program. After graduation, Dr. Ford was
         commissioned in the United States Army as a Second Lieutenant. He served
-        two years at Fort Hood, Texas in the 1st Calvary Division where he was a
+        two years at Fort Hood, Texas in the 1st Cavalry Division where he was a
         medical platoon leader in the Medical Service Corps. His next assignment
         took him to Walter Reed Army Medical Center in Washington, DC, where he
         spent the next two years in the Health Physics Department.
