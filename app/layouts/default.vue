@@ -14,7 +14,7 @@
   margin-left: auto;
   background: $white;
   width: 100%;
-  max-width: rem(1360);
+  max-width: rem(1400);
   @include shadow-5();
 }
 </style>

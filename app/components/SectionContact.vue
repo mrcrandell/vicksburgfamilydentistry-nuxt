@@ -122,7 +122,9 @@ onUnmounted(() => {
               >
             </p>
             <p>
-              <a href="mailto:vicksburgfamilydentistry@gmail.com"
+              <a
+                class="email-link"
+                href="mailto:vicksburgfamilydentistry@gmail.com"
                 ><span itemprop="email"
                   >vicksburgfamilydentistry@gmail.com</span
                 ></a
@@ -238,6 +240,14 @@ section.section.contact-us {
   }
   [v-cloak] {
     display: none;
+  }
+  .email-link {
+    @include bp-xl-desktop {
+      font-size: rem(14);
+    }
+    @include bp-custom-min(1400) {
+      font-size: rem(16);
+    }
   }
 }
 
